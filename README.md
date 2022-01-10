@@ -1,2 +1,6 @@
-# co226-database-project
-CO226 Database Project
+# CO226-Database-Project
+
+## Team
+- [Fernando K.A.I. - E/18/098](https://people.ce.pdn.ac.lk/students/e18/098/)
+- [Fernando K.N.A. - E/18/100](https://people.ce.pdn.ac.lk/students/e18/100/)
+- [Jayasundara J.W.K.R.B. - E/18/155](https://people.ce.pdn.ac.lk/students/e18/155/)
