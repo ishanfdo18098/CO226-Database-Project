@@ -1,0 +1,6 @@
+open files.000webhost.com
+user internship-allocation IshanAdeepaRidma
+lcd server
+cd public_html
+put *
+bye
