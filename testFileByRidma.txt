@@ -1,7 +1,0 @@
-this is a test to check whether my git thing is working
-I used git clone https://github.com/ishanfdo18098/CO226-Database-Project.git 
-
-not the ssh 
-because ssh one gava an error 
-
-is that a problem Ishan :)
