@@ -13,8 +13,3 @@ A Database to manage the allocation of internships in Companies for Students of 
 ## ER Diagram (To be updated with final diagram!)
 
 ![ERDIAGRAM](ER_DIAGRAM.png)
-
-## How to view site
-![image](https://user-images.githubusercontent.com/73381996/152272165-b4c94313-823f-429b-bed2-c7762e3443ae.png)
-![image](https://user-images.githubusercontent.com/73381996/152272245-67d63fa5-82d6-472c-ad17-0929508da630.png)
-
