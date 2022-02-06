@@ -1,4 +1,5 @@
 <?php
+1234 from website
 $servername = "localhost";
 $db_name = "id18333488_site";
 $username = "id18333488_user";
