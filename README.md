@@ -13,3 +13,6 @@ A Database to manage the allocation of internships in Companies for Students of 
 ## ER Diagram 
 
 ![ERDIAGRAM](./ER%20Diagram/ER_DIAGRAM.png)
+
+## Relational Schema Diagram
+![Relational Schema Diagram](./ER%20Diagram/Relational_schema_diagram.png)
