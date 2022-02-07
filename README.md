@@ -10,6 +10,6 @@ A Database to manage the allocation of internships in Companies for Students of 
 - [Fernando K.N.A. - E/18/100](https://people.ce.pdn.ac.lk/students/e18/100/)
 - [Jayasundara J.W.K.R.B. - E/18/155](https://people.ce.pdn.ac.lk/students/e18/155/)
 
-## ER Diagram (To be updated with final diagram!)
+## ER Diagram 
 
-![ERDIAGRAM](ER_DIAGRAM.png)
+![ERDIAGRAM](./ER%20Diagram/ER_DIAGRAM.png)
