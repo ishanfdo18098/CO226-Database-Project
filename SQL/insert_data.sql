@@ -1,6 +1,5 @@
 -- MariaDB
 
--- when testing code. delete exisiting tables
 use id18333488_site; --dont use this on 000webhost
 
 insert into department values 
