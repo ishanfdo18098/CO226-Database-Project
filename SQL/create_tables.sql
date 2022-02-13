@@ -2,6 +2,7 @@
 
 -- when testing code. delete exisiting tables
 use id18333488_site; --dont use this on 000webhost
+drop table student_works_in;
 drop table supervises;
 drop table student_skills;
 drop table company_services;
@@ -57,20 +58,18 @@ create table student (
     preferred_name varchar(100),
     surname_with_initials varchar(100),
     cv varchar(100),
-    company_id int,
     deparment_name varchar(100),
     constraint fk_student
-        foreign key (deparment_name) references department (dep_name),
-        foreign key (company_id) references company (company_id)
+        foreign key (deparment_name) references department (dep_name)
 );
 
 create table internship (
     internship_id int primary key,
+    company_id int,
     time_period varchar(50),
     mode_location varchar(50),
     type varchar(50),
     salary_allowance int,
-    company_id int,
     constraint fk_internship
         foreign key (company_id) references company (company_id)
 );
@@ -153,4 +152,12 @@ create table supervises (
     primary key(supervisor_id,e_no),
     constraint fk_supervises
         foreign key (supervisor_id) references supervisor (supervisor_id)
+);
+
+create table student_works_in (
+    e_no varchar(9) primary key,
+    internship_id int,
+    constraint fk_student_works_in
+        foreign key (e_no) references student (e_no),
+        foreign key (internship_id) references internship (internship_id)
 );

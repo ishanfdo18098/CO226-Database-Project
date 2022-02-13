@@ -1,3 +1,11 @@
+-- MariaDB
+
+-- when testing code. delete exisiting tables
+use id18333488_site; --dont use this on 000webhost
+
+insert into department values 
+("Department of Computer Engineering","head@ce.pdn.ac.lk","http://ce.pdn.ac.lk","http://people.ce.pdn.ac.lk","https://projects.ce.pdn.ac.lk");
+
 INSERT INTO student VALUES
 ('E/16/012','e16012@eng.pdn.ac.lk','','Adikari','Adikari','','','Department of Computer Engineering'),
 ('E/16/022','e16022@eng.pdn.ac.lk','','Amarasinghe D.L.C.','Amarasinghe D.L.C.','','','Department of Computer Engineering'),
@@ -195,4 +203,49 @@ INSERT INTO student VALUES
 ('E/18/398','e18398@eng.pdn.ac.lk','','Wijerathne R.M.N.S.','Wijerathne R.M.N.S.','','','Department of Computer Engineering'),
 ('E/18/402','e18402@eng.pdn.ac.lk','','Wimalasiri K.H.C.T.','Wimalasiri K.H.C.T.','','','Department of Computer Engineering'),
 ('E/18/406','e18406@eng.pdn.ac.lk','','Zameer M.H.M.','Zameer M.H.M.','','','Department of Computer Engineering'),
-('E/18/412','e18412@eng.pdn.ac.lk','','De Silva M.S.G.M.','De Silva M.S.G.M.','','','Department of Computer Engineering'),
+('E/18/412','e18412@eng.pdn.ac.lk','','De Silva M.S.G.M.','De Silva M.S.G.M.','','','Department of Computer Engineering');
+
+insert into company values
+(1,"company1","first@company.com",'someRank','https://google.com','We are google','addressline1','addressline2','country','state');
+
+insert into company_awards values 
+(1,"Worlds worst company award for 2022");
+
+insert into company_services values 
+(1,"Google search engine"),
+(1,"Gmail"),
+(1,"Google Cloud Platform");
+
+insert into supervisor values
+(1,"supervisorName1",'supervisor@compnay1.com','077123456789',1);
+
+insert into supervises values 
+(1,"E/18/098");
+
+insert into instructor values
+(1,"instructor1",'instructor1@ce.pdn.ac.lk','07987654321','Department of Computer Engineering');
+
+insert into instructs values 
+(1,"E/18/098");
+
+insert into lecturer values
+(1,'lecturer1','lecturer@ce.pdn.ac.lk','0123123465789','Department of Computer Engineering');
+
+insert into guides values 
+(1, "E/18/098");
+
+insert into internship values
+(1,1,"2 months","Online","Software developing","$50000");
+
+insert into requests values
+(1,'E/18/098',"2022/02/12");
+
+insert into student_works_in values 
+("E/18/155",1);
+
+insert into student_skills values
+("E/18/155","Python"),
+("E/18/155","C"),
+("E/18/155","PHP"),
+("E/18/155","Verilog"),
+("E/18/155","MySQL");
