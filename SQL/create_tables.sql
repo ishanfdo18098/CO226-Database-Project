@@ -1,7 +1,10 @@
 -- MariaDB
 
 -- when testing code. delete exisiting tables
-use id18333488_site; --dont use this on 000webhost
+
+-- dont use this on 000webhost
+use id18333488_site; 
+
 drop table student_works_in;
 drop table supervises;
 drop table student_skills;
@@ -35,6 +38,7 @@ create table supervisor (
     supervisor_id int primary key,
     name varchar(100),
     email varchar(100),
+    password varchar(50),
     phone_number varchar(20),
     company_id int,
     constraint fk_supervisor_company
@@ -53,6 +57,7 @@ create table department (
 create table student (
     e_no varchar(9) primary key,
     email varchar(100),
+    password varchar(50),
     first_name varchar(100),
     last_name varchar(100),
     preferred_name varchar(100),
@@ -78,6 +83,7 @@ create table instructor (
     instructor_id int primary key,
     name varchar(100),
     email varchar(100),
+    password varchar(50),
     phone_number varchar(15),
     deparment_name varchar(100),
     constraint fk_instructor
@@ -88,6 +94,7 @@ create table lecturer (
     lecturer_id int primary key,
     name varchar(100),
     email varchar(100),
+    password varchar(50),
     phone_number varchar(15),
     deparment_name varchar(100),
     constraint fk_lecturer
@@ -161,3 +168,13 @@ create table student_works_in (
         foreign key (e_no) references student (e_no),
         foreign key (internship_id) references internship (internship_id)
 );
+
+-- Better to put the password in each table
+-- create table users (
+--     supervisor_id int,
+--     instructor_id int,
+--     lecturer_id int,
+--     student_enumber varchar(9),
+--     password varchar(50),
+--     primary key(supervisor_id, instructor_id, lecturer_id, student_enumber, password)
+-- );
