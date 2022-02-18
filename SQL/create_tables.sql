@@ -172,7 +172,7 @@ create table student_works_in (
 
 create table logged_in(
     -- this could be from any table student, instructor, supervisor, lecturer
-    id_reg_no varchar(10),
+    email varchar(100),
     cookie_value varchar(50),
     expires_at date
 );
