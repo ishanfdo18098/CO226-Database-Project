@@ -32,7 +32,7 @@ printHeader();
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            echo json_encode($row);
+            // echo json_encode($row);
             echo "<center><h4>Welcome back, " . $row["e_no"] . " - " . $row["preferred_name"] . "<h4></center>";
             $isStudent = true;
             $count++;
@@ -44,7 +44,7 @@ printHeader();
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            echo json_encode($row);
+            // echo json_encode($row);
             echo "<center><h4>Welcome back, " . $row["name"] . "<h4></center>";
             $isInstructor = true;
             $count++;
@@ -56,7 +56,7 @@ printHeader();
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            echo json_encode($row);
+            // echo json_encode($row);
             echo "<center><h4>Welcome back, " . $row["name"] . "<h4></center>";
             $isLecturer = true;
             $count++;
@@ -68,7 +68,7 @@ printHeader();
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc();
-            echo json_encode($row);
+            // echo json_encode($row);
             echo "<center><h4>Welcome back, " . $row["name"] . "<h4></center>";
             $isSupervisor = true;
             $count++;
@@ -82,9 +82,11 @@ printHeader();
             die("<center><h4>Server error - please contact admin.<h4></center> ");
         }
 
-        echo ("<center><h5>You will be redirected in a second.<h5></center>");
+        if ($count == 1) {
+            echo ("<center><h5>You will be redirected in a second.<h5></center>");
+        }
         if ($isStudent) {
-            header("refresh:1; url=studentHome.php");
+            redirectToURL("/studentHome.php");
         } else if ($isInstructor) {
             header("refresh:1; url=instructorHome.php");
         } else if ($isLecturer) {
