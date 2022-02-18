@@ -439,6 +439,7 @@ insert into student_skills values
 ('E/18/155','Verilog'),
 ('E/18/155','MySQL');";
 $conn = connectToDB();
+$count = 0;
 if ($conn->multi_query($sql)) {
     do {
         // Store first result set
@@ -450,8 +451,9 @@ if ($conn->multi_query($sql)) {
         }
         // if there are more result-sets, the print a divider
         if ($conn->more_results()) {
-            printf("-------------</br>");
+            $count++;
         }
         //Prepare next result set
     } while ($conn->next_result());
 }
+echo ($count . " queries submitted <br> DB should be now resetted.");
