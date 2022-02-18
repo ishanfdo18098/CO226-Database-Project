@@ -1,4 +1,4 @@
-<!-- TODO: only student login is done. have to do other logins. need to detect which use is this too -->
+<!-- TODO: only student login is done. have to do other logins. need to detect which use is this too plus the sql seems to be wrong. better if we check in each table one by one -->
 
 <html>
 <?php
@@ -26,6 +26,7 @@ printHeader();
         if ($result->num_rows > 0) {
             // output data of each row
             while ($row = $result->fetch_assoc()) {
+                echo json_encode($row);
                 echo "<center><h4>Welcome back, " . $row["e_no"] . " - " . $row["preferred_name"] . "<h4></center>";
             }
         } else {
