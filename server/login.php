@@ -1,4 +1,4 @@
-<!-- TODO: only student login is done. have to do other logins. need to detect which use is this too plus the sql seems to be wrong. better if we check in each table one by one -->
+<!-- TODO: Passwords are not hashed. Hash them -->
 
 <html>
 <?php
