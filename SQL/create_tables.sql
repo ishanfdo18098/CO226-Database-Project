@@ -20,6 +20,7 @@ drop table instructor;
 drop table lecturer;
 drop table company;
 drop table department;
+drop table logged_in;
 
 create table company(
     company_id int primary key,

@@ -1,5 +1,6 @@
 import requests
 import json
+import hashlib
 
 writeFile = open("./outputs/studentData.sql", "w")
 
@@ -12,6 +13,6 @@ for eachStudent in data:
         continue
     if len(eachStudent['name_with_initials']) != 0:
         writeFile.write(
-            f"('{eachStudent['eNumber']}','{eachStudent['emails']['faculty']}','{eachStudent['preferred_long_name']}','{eachStudent['preferred_short_name']}','{eachStudent['name_with_initials']}','','','Department of Computer Engineering'),\n")
+            f"('{eachStudent['eNumber']}','{eachStudent['emails']['faculty']}','{eachStudent['emails']['faculty'][0:6]}','{eachStudent['preferred_long_name']}','{eachStudent['preferred_short_name']}','{eachStudent['name_with_initials']}','','','Department of Computer Engineering'),\n")
 
 print("Now go the end of the file and add the semicolon manually 😂")
