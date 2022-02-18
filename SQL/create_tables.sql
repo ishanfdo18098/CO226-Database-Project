@@ -169,6 +169,13 @@ create table student_works_in (
         foreign key (internship_id) references internship (internship_id)
 );
 
+create table logged_in(
+    -- this could be from any table student, instructor, supervisor, lecturer
+    id_reg_no varchar(10),
+    cookie_value varchar(50),
+    expires_at date
+);
+
 -- Better to put the password in each table
 -- create table users (
 --     supervisor_id int,
