@@ -1,2 +1,5 @@
 -- find user by email and password
-select * from student, lecturer, instructor, supervisor where (student.password = 'e18098' or lecturer.password = 'e18098' or instructor.password = 'e18098' or supervisor.password = 'e18098') and (student.email = 'e18098@eng.pdn.ac.lk' or lecturer.email = 'e18098@eng.pdn.ac.lk' or instructor.email = 'e18098@eng.pdn.ac.lk' or supervisor.email = 'e18098@eng.pdn.ac.lk');
+select * from student where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
+select * from instructor where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
+select * from lecturer where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
+select * from supervisor where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
