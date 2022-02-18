@@ -31,9 +31,6 @@ function printHeader()
 
 
 <!-- Load brand icons -->
-<link href="/assets/fontawesome/fontawesome.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/solid.min.css" rel="stylesheet">
-<link href="/assets/fontawesome/brands.min.css" rel="stylesheet">
 <link href="/assets/css/allCSS.css" rel="stylesheet">
 
 <!-- JavaScript files -->
