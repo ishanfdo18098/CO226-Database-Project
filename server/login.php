@@ -3,7 +3,7 @@
 <html>
 <?php
 require("./functions.php");
-
+session_start();
 $conn = connectToDB();
 printHeader();
 ?>
@@ -83,16 +83,22 @@ printHeader();
         }
 
         if ($count == 1) {
+            $_SESSION["email"] = $email;
+            $_SESSION['isLogged'] = true;
             echo ("<center><h5>You will be redirected in a second.<h5></center>");
         }
         if ($isStudent) {
-            redirectToURL("/studentHome.php");
+            $_SESSION['userType'] = "student";
+            redirectToURL("/studentHome.php", 1000);
         } else if ($isInstructor) {
-            header("refresh:1; url=instructorHome.php");
+            $_SESSION['userType'] = "instructor";
+            redirectToURL("/instructorHome.php", 1000);
         } else if ($isLecturer) {
-            header("refresh:1; url=lecturerHome.php");
+            $_SESSION['userType'] = "lecturer";
+            redirectToURL("/lecturerHome.php", 1000);
         } else if ($isSupervisor) {
-            header("refresh:1; url=supervisorHome.php");
+            $_SESSION['userType'] = "supervisor";
+            redirectToURL("/supervisorHome.php", 1000);
         }
 
         ?>

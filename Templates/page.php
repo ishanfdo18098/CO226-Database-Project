@@ -1,7 +1,7 @@
 <html>
 <?php
 require("./functions.php");
-
+session_start();
 $conn = connectToDB();
 printHeader();
 ?>

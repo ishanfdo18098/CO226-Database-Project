@@ -1,3 +1,5 @@
+<!-- IMPORTANT -->
+<!-- Security wasnt considered when making this site 🤣 This site could be vulnerable to many types of attacks -->
 <html>
 <?php
 require("./functions.php");

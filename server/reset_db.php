@@ -6,7 +6,7 @@ $sql = "-- MariaDB
 -- when testing code. delete exisiting tables
 
 -- dont use this on 000webhost
--- use id18333488_site; 
+use id18333488_site; 
 
 drop table student_works_in;
 drop table supervises;
@@ -23,7 +23,6 @@ drop table instructor;
 drop table lecturer;
 drop table company;
 drop table department;
-drop table logged_in;
 
 create table company(
     company_id int primary key,
@@ -67,9 +66,9 @@ create table student (
     preferred_name varchar(100),
     surname_with_initials varchar(100),
     cv varchar(100),
-    deparment_name varchar(100),
+    department_name varchar(100),
     constraint fk_student
-        foreign key (deparment_name) references department (dep_name)
+        foreign key (department_name) references department (dep_name)
 );
 
 create table internship (
@@ -173,12 +172,6 @@ create table student_works_in (
         foreign key (internship_id) references internship (internship_id)
 );
 
-create table logged_in(
-    -- this could be from any table student, instructor, supervisor, lecturer
-    email varchar(100),
-    cookie_value varchar(50),
-    expires_at date
-);
 
 -- Better to put the password in each table
 -- create table users (
@@ -189,6 +182,9 @@ create table logged_in(
 --     password varchar(50),
 --     primary key(supervisor_id, instructor_id, lecturer_id, student_enumber, password)
 -- );
+-- MariaDB
+
+use id18333488_site; -- dont use this on 000webhost
 
 insert into department values 
 ('Department of Computer Engineering','head@ce.pdn.ac.lk','http://ce.pdn.ac.lk','http://people.ce.pdn.ac.lk','https://projects.ce.pdn.ac.lk');
@@ -456,4 +452,4 @@ if ($conn->multi_query($sql)) {
         //Prepare next result set
     } while ($conn->next_result());
 }
-echo ($count . " queries submitted <br> DB should be now resetted.");
+echo ($count . " out of 44 queries submitted <br> DB should be now resetted.");
