@@ -1,12 +1,11 @@
-<!-- TODO: Passwords are not hashed. Hash them -->
-
-<html>
 <?php
-require("./functions.php");
 session_start();
+require("./functions.php");
 $conn = connectToDB();
 printHeader();
 ?>
+    <!-- TODO: Passwords are not hashed. Hash them -->
+<html>
 
 <body>
     <div class="container">

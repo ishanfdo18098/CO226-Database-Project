@@ -3,3 +3,19 @@ select * from student where  email = 'e18098@eng.pdn.ac.lk' and password = 'e180
 select * from instructor where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
 select * from lecturer where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
 select * from supervisor where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
+
+-- studentHome.php
+-- get student name from email
+select * from studnet where email = "e18098@eng.pdn.ac.lk";
+-- get supervisor details from student email
+select * from supervisor, supervises where supervises.supervisor_id = supervisor.supervisor_id and supervises.e_no = (select e_no from student where email = 'e18098@eng.pdn.ac.lk'); 
+-- get company details from company id
+select * from company where company_id = "1";
+-- get working in company details
+select internship.name as internship_name, company.name as company_name from student, student_works_in, internship, company where student.email = 'e18155@eng.pdn.ac.lk' and student.e_no = student_works_in.e_no and student_works_in.internship_id = internship.internship_id and internship.company_id = company.company_id;
+-- get requested interships
+select requests.date, internship.name from internship, student, requests where student.e_no = requests.e_no and student.email = 'e18098@eng.pdn.ac.lk' and internship.internship_id = requests.internship_id;
+-- get guider info
+select lecturer.name from guides, lecturer,student where student.email = 'e18098@eng.pdn.ac.lk' and student.e_no = guides.e_no and guides.lecturer_id = lecturer.lecturer_id;
+-- get instructor details
+select instructor.name from student, instructs, instructor where student.email = 'e18098@eng.pdn.ac.lk' and student.e_no = instructs.e_no and instructs.instructor_id = instructor.instructor_id;

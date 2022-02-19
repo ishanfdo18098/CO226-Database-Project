@@ -73,6 +73,7 @@ create table student (
 
 create table internship (
     internship_id int primary key,
+    name varchar(100),
     company_id int,
     time_period varchar(50),
     mode_location varchar(50),
@@ -182,6 +183,7 @@ create table student_works_in (
 --     password varchar(50),
 --     primary key(supervisor_id, instructor_id, lecturer_id, student_enumber, password)
 -- );
+
 -- MariaDB
 
 use id18333488_site; -- dont use this on 000webhost
@@ -420,7 +422,7 @@ insert into guides values
 (1, 'E/18/098');
 
 insert into internship values
-(1,1,'2 months','Online','Software developing','50000');
+(1,'Software developer intern',1,'2 months','Online','Software developing','50000');
 
 insert into requests values
 (1,'E/18/098','2022/02/12');
@@ -452,4 +454,4 @@ if ($conn->multi_query($sql)) {
         //Prepare next result set
     } while ($conn->next_result());
 }
-echo ($count . " out of 44 queries submitted <br> DB should be now resetted.");
+echo ($count . " queries submitted <br> DB should be now resetted.");

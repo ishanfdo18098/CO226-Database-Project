@@ -1,12 +1,11 @@
-<!-- IMPORTANT -->
-<!-- Security wasnt considered when making this site 🤣 This site could be vulnerable to many types of attacks -->
-<html>
 <?php
+session_start();
 require("./functions.php");
-
 $conn = connectToDB();
 printHeader();
 ?>
+<!-- IMPORTANT -->
+<!-- Security wasnt considered when making this site 🤣 This site could be vulnerable to many types of attacks -->
 
 <body>
   <?php
@@ -51,8 +50,13 @@ printHeader();
       </div>
     </div>
     </div>
-
   </main>
+
+  <div class="container">
+    <center> default password is your e number <br>
+      example: username - e18098@eng.pdn.ac.lk <br>
+      password - e18098</center>
+  </div>
 
   <?php printFooter(); ?>
 </body>

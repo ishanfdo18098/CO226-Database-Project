@@ -236,7 +236,7 @@ insert into guides values
 (1, 'E/18/098');
 
 insert into internship values
-(1,1,'2 months','Online','Software developing','50000');
+(1,'Software developer intern',1,'2 months','Online','Software developing','50000');
 
 insert into requests values
 (1,'E/18/098','2022/02/12');

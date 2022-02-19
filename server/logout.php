@@ -1,11 +1,10 @@
-<html>
 <?php
+session_start();
 require("./functions.php");
-
 $conn = connectToDB();
 printHeader();
-session_start();
 ?>
+<html>
 
 <body>
     <?php printNavbar();
