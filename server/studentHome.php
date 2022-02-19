@@ -34,13 +34,13 @@ printHeader();
     $sql = "select * from supervisor, supervises where supervises.supervisor_id = supervisor.supervisor_id and supervises.e_no = (select e_no from student where email = '" . $_SESSION['email'] . "'); ";
     $result = mysqli_query($conn, $sql);
 
+    echo ("<br>You are supervised by, ");
     if (mysqli_num_rows($result) > 0) {
         // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
             $name = $row['name'];
             $company_id = $row['company_id'];
-            echo ("<br>You are supervised by, $name from ");
-
+            echo ("$name from ");
             $sql = "select * from company where company_id = '$company_id';";
             $result = mysqli_query($conn, $sql);
 

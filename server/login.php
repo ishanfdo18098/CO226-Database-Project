@@ -4,7 +4,7 @@ require("./functions.php");
 $conn = connectToDB();
 printHeader();
 ?>
-    <!-- TODO: Passwords are not hashed. Hash them -->
+<!-- TODO: Passwords are not hashed. Hash them -->
 <html>
 
 <body>
@@ -12,8 +12,8 @@ printHeader();
         <?php printNavbar(); ?>
         <?php
         // collect value of input field
-        $email = mysqli_real_escape_string($conn, $_GET['email-address']);
-        $password = mysqli_real_escape_string($conn, $_GET['password']);
+        $email = mysqli_real_escape_string($conn, $_POST['email-address']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
         ?>
         <center>
             <h3>Logging in</h3>
