@@ -75,11 +75,11 @@ function printFooter()
 </div>');
 }
 
-function redirectToURL($url)
+function redirectToURL($url, $time)
 {
     echo ("<br>\n<script>
     setTimeout(function () {
-       window.location.href = '.$url.'; 
-    }, 1000); 
+       window.location.href = '$url'; 
+    }, $time); 
     </script>");
 }
