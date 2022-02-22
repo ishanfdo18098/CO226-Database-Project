@@ -4,6 +4,8 @@ select * from instructor where  email = 'e18098@eng.pdn.ac.lk' and password = 'e
 select * from lecturer where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
 select * from supervisor where  email = 'e18098@eng.pdn.ac.lk' and password = 'e18098' ;
 
+
+
 -- studentHome.php
 -- get student name from email
 select * from studnet where email = "e18098@eng.pdn.ac.lk";
@@ -27,3 +29,16 @@ insert into requests values ($id,(select e_no from student where email = 'e18098
 delete from requests where e_no = (select e_no from student where email='e18098@eng.pdn.ac.lk') and internship_id = 1;
 -- get where you are curenly working in
 select internship.name, company.name as comp_name from student_works_in, company, internship where e_no = (select e_no from student where email = 'e18155@eng.pdn.ac.lk') and student_works_in.internship_id = internship.internship_id and company.company_id = internship.company_id;
+
+
+
+
+
+-- supervisor
+-- test login - supervisor@compnay1.com  password123 
+-- get your name
+select name from supervisor where email = 'supervisor@compnay1.com';
+-- get where you work
+select company.name from supervisor, company where company.company_id = supervisor.company_id and supervisor.email = 'supervisor@compnay1.com';
+-- who you're supervising
+sselect student.e_no, student.preferred_name from student, supervisor, supervises where student.e_no = supervises.e_no and supervisor.supervisor_id = supervises.supervisor_id and supervisor.email = 'supervisor@compnay1.com';
