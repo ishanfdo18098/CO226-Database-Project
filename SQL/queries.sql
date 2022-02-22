@@ -14,7 +14,7 @@ select * from company where company_id = "1";
 -- get working in company details
 select internship.name as internship_name, company.name as company_name from student, student_works_in, internship, company where student.email = 'e18155@eng.pdn.ac.lk' and student.e_no = student_works_in.e_no and student_works_in.internship_id = internship.internship_id and internship.company_id = company.company_id;
 -- get requested interships
-select requests.date, internship.name from internship, student, requests where student.e_no = requests.e_no and student.email = 'e18098@eng.pdn.ac.lk' and internship.internship_id = requests.internship_id;
+select internship.internship_id ,requests.date, internship.name from internship, student, requests where student.e_no = requests.e_no and student.email = 'e18098@eng.pdn.ac.lk' and internship.internship_id = requests.internship_id;
 -- get guider info
 select lecturer.name from guides, lecturer,student where student.email = 'e18098@eng.pdn.ac.lk' and student.e_no = guides.e_no and guides.lecturer_id = lecturer.lecturer_id;
 -- get instructor details
@@ -23,3 +23,5 @@ select instructor.name from student, instructs, instructor where student.email =
 select internship.internship_id ,internship.name as internship_name, internship.time_period, internship.mode_location, internship.type, internship.salary_allowance, company.name from internship, company where internship.company_id = company.company_id;
 -- request new internship
 insert into requests values ($id,(select e_no from student where email = 'e18098@eng.pdn.ac.lk'),'$date');
+-- delete request
+delete from requests where e_no = (select e_no from student where email='e18098@eng.pdn.ac.lk') and internship_id = 1;

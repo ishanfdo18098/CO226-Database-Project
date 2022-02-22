@@ -100,20 +100,21 @@ printHeader();
     }
 
     echo ("<br><br>You have currently requested for, <br>");
-    $sql = "select requests.date, internship.name from internship, student, requests where student.e_no = requests.e_no and student.email = '$email' and internship.internship_id = requests.internship_id;";
+    $sql = "select internship.internship_id ,requests.date, internship.name from internship, student, requests where student.e_no = requests.e_no and student.email = '$email' and internship.internship_id = requests.internship_id;";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         // output data of each row
         while ($row = mysqli_fetch_assoc($result)) {
             $date = $row['date'];
+            $internship_ID = $row['internship_id'];
             $intership_name = $row['name'];
-            echo ($intership_name . " on " . $date . "<br>");
+            echo ($intership_name . " on " . $date . "<button type='button' onclick=\"location.href='/studentRemoveRequestInternship.php?internshipID=$internship_ID'\" class=\"btn btn-primary\">Remove</button><br>");
         }
     } else {
         echo "N/A";
     }
 
-    echo ("<br>Available internships,<br>");
+    echo ("<br><br>Available internships,<br>");
     $sql = "select internship.internship_id ,internship.name as internship_name, internship.time_period, internship.mode_location, internship.type, internship.salary_allowance, company.name from internship, company where internship.company_id = company.company_id;";
     $result = mysqli_query($conn, $sql);
 
