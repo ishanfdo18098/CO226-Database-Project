@@ -108,7 +108,7 @@ printHeader();
             $date = $row['date'];
             $internship_ID = $row['internship_id'];
             $intership_name = $row['name'];
-            echo ($intership_name . " on " . $date . "<button type='button' onclick=\"location.href='/studentRemoveRequestInternship.php?internshipID=$internship_ID'\" class=\"btn btn-primary\">Remove</button><br>");
+            echo ($intership_name . " on " . $date . "<button type='button' onclick=\"location.href='/studentRemoveRequestInternship.php?internshipID=$internship_ID'\" class=\"btn btn-danger\">Remove</button><br>");
         }
     } else {
         echo "N/A";
