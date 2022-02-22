@@ -56,7 +56,7 @@ printHeader();
             while ($row = mysqli_fetch_assoc($result)) {
                 $e_no = $row['e_no'];
                 $name = $row['preferred_name'];
-                echo ("<h3>" . $e_no . " " . $name);
+                echo ("<h3>" . $e_no . " " . $name . "<button type='button' onclick=\"location.href='/supervisorRemoveSupervision.php?reg_no=$e_no'\" class=\"btn btn-danger\">Remove</button><br>");
             }
         } else {
             echo "<br>N/A";
