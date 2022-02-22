@@ -25,3 +25,5 @@ select internship.internship_id ,internship.name as internship_name, internship.
 insert into requests values ($id,(select e_no from student where email = 'e18098@eng.pdn.ac.lk'),'$date');
 -- delete request
 delete from requests where e_no = (select e_no from student where email='e18098@eng.pdn.ac.lk') and internship_id = 1;
+-- get where you are curenly working in
+select internship.name, company.name as comp_name from student_works_in, company, internship where e_no = (select e_no from student where email = 'e18155@eng.pdn.ac.lk') and student_works_in.internship_id = internship.internship_id and company.company_id = internship.company_id;
