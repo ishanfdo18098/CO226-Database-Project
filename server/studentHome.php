@@ -113,6 +113,28 @@ printHeader();
         echo "N/A";
     }
 
+    echo ("<br>Available internships,<br>");
+    $sql = "select internship.internship_id ,internship.name as internship_name, internship.time_period, internship.mode_location, internship.type, internship.salary_allowance, company.name from internship, company where internship.company_id = company.company_id;";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) > 0) {
+        // output data of each row
+        while ($row = mysqli_fetch_assoc($result)) {
+            $id = $row['internship_id'];
+            $name = $row['internship_name'];
+            $time_period = $row['time_period'];
+            $mode = $row['mode_location'];
+            $type = $row['type'];
+            $salary = $row['salary_allowance'];
+            $compy_name = $row['name'];
+
+            echo ($name . "<button type='button' onclick=\"location.href='/studentRequestInternship.php?internshipID=$id'\" class=\"btn btn-primary\">Apply</button>");
+        }
+    } else {
+        echo "<br>No supervisor available";
+    }
+
+
 
 
     ?>
