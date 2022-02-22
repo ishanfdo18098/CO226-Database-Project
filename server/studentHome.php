@@ -144,13 +144,11 @@ printHeader();
         while ($row = mysqli_fetch_assoc($result)) {
             $internship_name = $row['name'];
             $company_name = $row['comp_name'];
-            echo ($name);
+            echo ($name . " at " . $company_name);
         }
     } else {
         echo "N/A";
     }
-
-
 
     ?>
     </center>
