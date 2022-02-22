@@ -41,4 +41,6 @@ select name from supervisor where email = 'supervisor@compnay1.com';
 -- get where you work
 select company.name from supervisor, company where company.company_id = supervisor.company_id and supervisor.email = 'supervisor@compnay1.com';
 -- who you're supervising
-sselect student.e_no, student.preferred_name from student, supervisor, supervises where student.e_no = supervises.e_no and supervisor.supervisor_id = supervises.supervisor_id and supervisor.email = 'supervisor@compnay1.com';
+select student.e_no, student.preferred_name from student, supervisor, supervises where student.e_no = supervises.e_no and supervisor.supervisor_id = supervises.supervisor_id and supervisor.email = 'supervisor@compnay1.com';
+-- add new supervising student
+insert into supervises values ((select supervisor_id from supervisor where email = 'supervisor@compnay1.com'),'E/18/155');

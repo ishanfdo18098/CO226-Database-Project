@@ -61,8 +61,14 @@ printHeader();
         } else {
             echo "<br>N/A";
         }
-        echo ("<br>");
+        echo ("<br><br>");
+
+        echo ("Add new student to supervising list,");
         ?>
+        <form action="/supervisorAddSupervising.php" method="post">
+            <input type="text" name="reg_no" placeholder="E/18/098 etc...">
+            <button type="submit">Add</button>
+        </form>
 
     </center>
     <?php printFooter(); ?>
