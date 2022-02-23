@@ -17,10 +17,10 @@ printHeader();
             $sql = "delete from supervises where supervisor_id = (select supervisor_id from supervisor where email = '$email') and e_no = '$regNo';";
 
             if ($conn->query($sql) === TRUE) {
-                echo "Supervision removed successfullly<br> You will be redirected to the previous page in 2 seconds";
+                echo "<h3 style='color:Green;'>Supervision removed successfullly<br> You will be redirected to the previous page in 2 seconds</h3>";
                 redirectToURL("/supervisorHome.php", 2000);
             } else {
-                echo "Something went wrong. Maybe you have already removed supervision. If not please contact admin<br>Error: " . $sql . "<br>" . $conn->error;
+                echo "<h3 style='color:Reg;'>Something went wrong. Maybe you have already removed supervision. If not please contact admin<br>Error: " . $sql . "<br>" . $conn->error;
             }
             ?>
 
