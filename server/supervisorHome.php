@@ -47,7 +47,7 @@ printHeader();
         echo ("<br>");
         echo ("<br>");
 
-        echo ("<h3>You are superivising, </h3>");
+        echo ("<h3>You are superivising,<br> ");
         $sql = "select student.e_no, student.preferred_name from student, supervisor, supervises where student.e_no = supervises.e_no and supervisor.supervisor_id = supervises.supervisor_id and supervisor.email = '$email';";
         $result = mysqli_query($conn, $sql);
 
@@ -56,7 +56,7 @@ printHeader();
             while ($row = mysqli_fetch_assoc($result)) {
                 $e_no = $row['e_no'];
                 $name = $row['preferred_name'];
-                echo ("<h3>" . $e_no . " " . $name . "<button type='button' onclick=\"location.href='/supervisorRemoveSupervision.php?reg_no=$e_no'\" class=\"btn btn-danger\">Remove</button><br>");
+                echo ($e_no . " " . $name . "<button type='button' onclick=\"location.href='/supervisorRemoveSupervision.php?reg_no=$e_no'\" class=\"btn btn-danger\">Remove</button><br>");
             }
         } else {
             echo "<br>N/A";

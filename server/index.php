@@ -66,8 +66,10 @@ if (isset($_SESSION['userType'])) {
 
     <div class="container">
       <center> default password is your e number <br>
-        example: username - e18098@eng.pdn.ac.lk <br>
-        password - e18098</center>
+        Student: username - e18098@eng.pdn.ac.lk <br>
+        password - e18098 <br><br>
+        Supervisor: username - supervisor@compnay1.com<br>
+        password - password123</center>
     </div>
 
     <?php printFooter(); ?>
