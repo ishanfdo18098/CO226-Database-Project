@@ -56,8 +56,8 @@ function printNavbar()
 
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            
             <li class="nav-item"><a href="/logout.php" class="nav-link">Logout</a></li>
-
             <li class="nav-item"><a href="/about.php" class="nav-link">About</a></li>
             
         </ul>
@@ -81,6 +81,15 @@ function redirectToURL($url, $time)
     echo ("<br>\n<script>
     setTimeout(function () {
        window.location.href = '$url'; 
+    }, $time); 
+    </script>");
+}
+
+function goBack($time)
+{
+    echo ("<br>\n<script>
+    setTimeout(function () {
+       history.back();
     }, $time); 
     </script>");
 }
