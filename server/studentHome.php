@@ -151,6 +151,12 @@ printHeader();
     }
 
     ?>
+    <br><br>
+    <form action="/studentChangePassword.php" method="post">
+        <label for="newPass">Change your password: </label>
+        <input type="text" name='newPass'>
+        <button type='submit' class="btn btn-primary">Change password</button>
+    </form>
     </center>
     <?php printFooter(); ?>
 </body>
