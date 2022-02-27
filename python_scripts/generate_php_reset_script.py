@@ -13,7 +13,7 @@ for eachLine in file1:
     elif (";" in eachLine) and not ("--" in eachLine):
         sqlCount += 1
     outputText += eachLine
-    
+
 for eachLine in file2:
     if "id18333488_site;" in eachLine:
         continue
@@ -25,7 +25,7 @@ print(f"{sqlCount} number of queries")
 
 outputText += """";
 $conn = connectToDB();
-$count = 0;
+$count = 1;
 if ($conn->multi_query($sql)) {
     do {
         // Store first result set

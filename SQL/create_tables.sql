@@ -171,12 +171,3 @@ create table student_works_in (
 );
 
 
--- Better to put the password in each table
--- create table users (
---     supervisor_id int,
---     instructor_id int,
---     lecturer_id int,
---     student_enumber varchar(9),
---     password varchar(50),
---     primary key(supervisor_id, instructor_id, lecturer_id, student_enumber, password)
--- );
