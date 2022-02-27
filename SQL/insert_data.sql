@@ -4,7 +4,8 @@ use id18333488_site; -- dont use this on 000webhost
 
 insert into department values 
 ('Department of Computer Engineering','head@ce.pdn.ac.lk','http://ce.pdn.ac.lk','http://people.ce.pdn.ac.lk','https://projects.ce.pdn.ac.lk'),
-('Department of Mechanical Engineering','head@me.pdn.ac.lk','http://me.pdn.ac.lk','http://siteNotFound.ce.pdn.ac.lk','https://notFound.ce.pdn.ac.lk');
+('Department of Mechanical Engineering','head@me.pdn.ac.lk','http://me.pdn.ac.lk','http://siteNotFound.me.pdn.ac.lk','https://notFound.me.pdn.ac.lk'),
+('Department of Manufacturing & Industrial Engineering','head@mie.pdn.ac.lk','http://mie.pdn.ac.lk','http://siteNotFound.mie.pdn.ac.lk','https://notFound.mie.pdn.ac.lk');
 
 
 -- this was generated using the API from api.ce.pdn.ac.lk and python scripting
@@ -433,7 +434,7 @@ insert into instructs values
 (3,'E/18/058'), 
 (3,'E/18/068'),
 (4,'E/18/073'), 
-(4,'E/18/078'),
+(4,'E/18/077'),
 (4,'E/18/115'),
 (5,'E/18/098'),
 (5,'E/18/100'),
@@ -467,9 +468,27 @@ INSERT INTO lecturer VALUES
 
 
 insert into guides values 
-(1, 'E/18/098'),
-(1, 'E/18/155'),
-(1, 'E/18/100');
+(1,'E/18/010'),
+(1,'E/18/013'),
+(1,'E/18/017'),
+(2,'E/18/022'),
+(2,'E/18/028'), 
+(2,'E/18/030'),
+(3,'E/18/036'),
+(3,'E/18/058'), 
+(3,'E/18/068'),
+(4,'E/18/073'), 
+(4,'E/18/077'),
+(4,'E/18/115'),
+(5,'E/18/098'),
+(5,'E/18/100'),
+(5,'E/18/155'),
+(6,'E/18/118'),
+(6,'E/18/128'),
+(6,'E/18/147'),
+(7,'E/18/149'),
+(7,'E/18/150'),
+(7,'E/18/154');
 
 insert into internship values
 (1,'Software developer intern 1',1,'2 months','Online','Software developing','50000'),
