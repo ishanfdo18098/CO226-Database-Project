@@ -378,7 +378,27 @@ insert into supervisor values
 (20,'supervisorName20','supervisor@company20.com','password123','077456789123',20);
 
 insert into supervises values 
-(1,'E/18/098');
+(1,'E/18/009'),
+(2,'E/18/010'),
+(3,'E/18/013'),
+(4,'E/18/014'),
+(5,'E/18/017'),
+(6,'E/18/022'),
+(7,'E/18/028'),
+(8,'E/18/030'),
+(9,'E/18/036'),
+(10,'E/18/058'),
+(11,'E/18/063'),
+(12,'E/18/068'),
+(13,'E/18/073'),
+(14,'E/18/077'),
+(15,'E/18/097'),
+(16,'E/18/098'),
+(17,'E/18/100'),
+(18,'E/18/115'),
+(18,'E/18/118'),
+(19,'E/18/126'),
+(20,'E/18/128');
 
 insert into instructor values
 (1,'Anjalee Wanigarathne','anj.wanigarathne@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
