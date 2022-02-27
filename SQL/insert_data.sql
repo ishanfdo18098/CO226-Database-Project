@@ -446,6 +446,7 @@ insert into instructs values
 (7,'E/18/150'),
 (7,'E/18/154');
 
+-- this was generated using the API from api.ce.pdn.ac.lk and python scripting
 INSERT INTO lecturer VALUES
 (1,'Mr. Amila Indika','namilaindika@eng.pdn.ac.lk','password123',947000000,'Department of Computer Engineering'),
 (2,'Dr. Asitha Bandaranayake','asithab@eng.pdn.ac.lk','password123',947000000,'Department of Computer Engineering'),
