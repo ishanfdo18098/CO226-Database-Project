@@ -779,4 +779,4 @@ if ($conn->multi_query($sql)) {
         //Prepare next result set
     } while ($conn->next_result());
 }
-echo ($count . " queries submitted <br> DB should be now resetted.");
+echo ($count . " out of 45 queries submitted <br> DB should be now resetted.");
