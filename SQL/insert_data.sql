@@ -250,11 +250,49 @@ insert into supervises values
 (1,'E/18/098');
 
 insert into instructor values
-(1,'instructor1','instructor1@ce.pdn.ac.lk','password123','07987654321','Department of Computer Engineering'),
-(2,'instructor2','instructor2@ce.pdn.ac.lk','password1234','07987654321','Department of Computer Engineering');
+(1,'Anjalee Wanigarathne','anj.wanigarathne@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(2,'Thushara Bandara','thusharab@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(3,'Kalani Hansima','kalaniu@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(4,'Dilshani Karunarathna','dilshanik@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(5,'Nuwan Jaliyagoda','nuwanjaliyagoda@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(6,'Imesh Ekanayake','imeshuek@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(7,'Keshara Weerasinghe','kesharaw@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(8,'Chathuri Aththanayake','chathurimalee@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(9,'Arjuna Thennakoon','arjunat@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(10,'Kanchana Jayasinghe','kc43224jayasinghe@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(11,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(12,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(13,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(14,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(15,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(16,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(17,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(18,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(19,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering'),
+(20,'instructor1','instructor1@ce.pdn.ac.lk','password123','0791234567','Department of Computer Engineering');
 
-insert into instructs values 
-(1,'E/18/098');
+insert into instructs values
+(1,'E/18/010'),
+(1,'E/18/013'),
+(1,'E/18/017'),
+(2,'E/18/022'),
+(2,'E/18/028'), 
+(2,'E/18/030'),
+(3,'E/18/036'),
+(3,'E/18/058'), 
+(3,'E/18/068'),
+(4,'E/18/073'), 
+(4,'E/18/078'),
+(4,'E/18/115'),
+(5,'E/18/098'),
+(5,'E/18/100'),
+(5,'E/18/155'),
+(6,'E/18/118'),
+(6,'E/18/128'),
+(6,'E/18/147'),
+(7,'E/18/149'),
+(7,'E/18/150'),
+(7,'E/18/154');
 
 insert into lecturer values
 (1,'lecturer1','lecturer1@ce.pdn.ac.lk','password123','01231234657890','Department of Computer Engineering'),
