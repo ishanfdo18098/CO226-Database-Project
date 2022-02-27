@@ -1,4 +1,5 @@
 <?php
+// for retriving
 $sql = "select * from company where company_id = '$company_id';";
 $result = mysqli_query($conn, $sql);
 
@@ -12,6 +13,7 @@ if (mysqli_num_rows($result) > 0) {
     echo "<br>No supervisor available";
 }
 
+// for alterations
 $sql = "delete from requests where e_no = (select e_no from student where email='$email') and internship_id = $internship_id;";
 
 if ($conn->query($sql) === TRUE) {
