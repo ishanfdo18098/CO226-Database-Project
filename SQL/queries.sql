@@ -47,3 +47,8 @@ select student.e_no, student.preferred_name from student, supervisor, supervises
 insert into supervises values ((select supervisor_id from supervisor where email = 'supervisor@compnay1.com'),'E/18/155');
 -- remove supervision
 delete from supervises where supervisor_id = (select supervisor_id from supervisor where email = 'supervisor@compnay1.com') and e_no = 'E/18/155';
+-- get all requests for internships for your company
+select student.e_no, student.first_name,  company.name as compName, internship.name as internshipName from requests, internship, company, student, supervises where company.company_id = internship.company_id and requests.internship_id = internship.internship_id and student.e_no = supervises.e_no and supervises.supervisor_id = (select supervisor_id from supervisor where email = 'supervisor@company1.com');
+-- accept request for internship
+delete from requests where e_no = "E/18/098";
+insert into student_works_in values ("E/18/098",1);
