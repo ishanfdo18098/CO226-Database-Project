@@ -30,6 +30,9 @@ printHeader();
         }
         echo ("<br>");
 
+
+
+        echo ("<h4>You are working for, </h4>");
         $sql = "select company.name from supervisor, company where company.company_id = supervisor.company_id and supervisor.email = '$email';";
         $result = mysqli_query($conn, $sql);
 
@@ -41,6 +44,22 @@ printHeader();
             }
         } else {
             echo "<br>You arent working in any company. Please contact admin";
+        }
+        echo ("<br><br><h4>Students currently working at your company,<br></h4>");
+        $sql = "select student.e_no, student.preferred_name, internship.internship_id, internship.name  from student ,student_works_in, internship, company, supervisor where internship.company_id = company.company_id and student_works_in.internship_id = internship.internship_id and company.company_id = supervisor.company_id and supervisor.email = '$email' and student.e_no = student_works_in.e_no ;";
+        $result = mysqli_query($conn, $sql);
+
+        if (mysqli_num_rows($result) > 0) {
+            // output data of each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                $eno = $row['e_no'];
+                $studName = $row['preferred_name'];
+                $internName = $row['name'];
+                $internID = $row['internship_id'];
+                echo ("<h4>" . $eno . " " . $studName . " as " . $internName . "<button type='button' onclick=\"location.href='/supervisorRemoveWorkingStudent.php?reg_no=$eno&internID=$internID'\" class=\"btn btn-danger\">Remove</button><br></h4>");
+            }
+        } else {
+            echo "No students are working at your company";
         }
 
         echo ("");

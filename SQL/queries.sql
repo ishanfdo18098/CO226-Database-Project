@@ -52,3 +52,7 @@ select student.e_no, student.first_name,  company.name as compName, internship.n
 -- accept request for internship
 delete from requests where e_no = "E/18/098";
 insert into student_works_in values ("E/18/098",1);
+-- find who is working at your company
+select student.e_no, student.preferred_name, internship.internship_id, internship.name  from student ,student_works_in, internship, company, supervisor where internship.company_id = company.company_id and student_works_in.internship_id = internship.internship_id and company.company_id = supervisor.company_id and supervisor.email = 'supervisor@company1.com' and student.e_no = student_works_in.e_no ;
+-- delete student thats workign for you
+delete from student_works_in where internship_id = 1 and e_no = 'E/18/098';
