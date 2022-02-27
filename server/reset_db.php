@@ -439,9 +439,26 @@ insert into instructor values
 insert into instructs values 
 (1,'E/18/098');
 
-insert into lecturer values
-(1,'lecturer1','lecturer1@ce.pdn.ac.lk','password123','01231234657890','Department of Computer Engineering'),
-(2,'lecturer2','lecturer2@ce.pdn.ac.lk','password123','01231234657891','Department of Computer Engineering');
+INSERT INTO lecturer VALUES
+(1,'Mr. Amila Indika','namilaindika@eng.pdn.ac.lk','password123',947000000,'Department of Computer Engineering'),
+(2,'Dr. Asitha Bandaranayake','asithab@eng.pdn.ac.lk','password123',947000000,'Department of Computer Engineering'),
+(3,'Dr. Damayanthi Herath','damayanthiherath@eng.pdn.ac.lk','password123',+94812393920,'Department of Computer Engineering'),
+(4,'Dr. Dhammika Elkaduwe','dhammika@eng.pdn.ac.lk','password123',+94812393914,'Department of Computer Engineering'),
+(5,'Dr. Isuru Nawinne','isurunawinne@eng.pdn.ac.lk','password123',+94812393470,'Department of Computer Engineering'),
+(6,'Dr. Janaka Alawatugoda','alawatugoda@eng.pdn.ac.lk','password123',+94812393470,'Department of Computer Engineering'),
+(7,'Dr. Eng. Kamalanath Samarakoon','kamalanath@eng.pdn.ac.lk','password123',+94712277994,'Department of Computer Engineering'),
+(8,'Dr. Mahanama Wickramasinghe','mahanamaw@eng.pdn.ac.lk','password123',+94704153780,'Department of Computer Engineering'),
+(9,'Dr. Manjula Sandirigama','manjula.sandirigama@gmail.com','password123',+94718385968,'Department of Computer Engineering'),
+(10,'Mrs. Nadeesha Adikari','nadeeshaa@eng.pdn.ac.lk','password123',947000000,'Department of Computer Engineering'),
+(11,'Prof. Roshan G. Ragel','roshanr@eng.pdn.ac.lk','password123',+94812393913,'Department of Computer Engineering'),
+(12,'Mr. Sampath Deegalla','sampath@eng.pdn.ac.lk','password123',+94812393477,'Department of Computer Engineering'),
+(13,'Dr. Shirley Dewasurendra','dewasuren@gmail.com','password123',+94812393478,'Department of Computer Engineering'),
+(14,'Dr. Sithumini Ekanayake','sithuminie@eng.pdn.ac.lk','password123',947000000,'Department of Computer Engineering'),
+(15,'Dr. Suneth Namal Karunarathna','namal@eng.pdn.ac.lk','password123',+94768321333,'Department of Computer Engineering'),
+(16,'Dr. Swarnalatha Radhakrishnan','swarnar@eng.pdn.ac.lk','password123',+94812393476,'Department of Computer Engineering'),
+(17,'Dr. Upul Jayasinghe','upuljm@eng.pdn.ac.lk','password123',+94812393470,'Department of Computer Engineering'),
+(18,'Mr. Ziyan Maraikar','ziyanm@eng.pdn.ac.lk','password123',+94812393475,'Department of Computer Engineering');
+
 
 insert into guides values 
 (1, 'E/18/098'),
