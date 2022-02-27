@@ -6,15 +6,22 @@ outputText = """<?php
 require("./functions.php");
 
 $sql = " """
-
+sqlCount = 0
 for eachLine in file1:
     if "id18333488_site;" in eachLine:
         continue
+    elif (";" in eachLine) and not ("--" in eachLine):
+        sqlCount += 1
     outputText += eachLine
+    
 for eachLine in file2:
     if "id18333488_site;" in eachLine:
         continue
+    elif (";" in eachLine) and not ("--" in eachLine):
+        sqlCount += 1
     outputText += eachLine
+
+print(f"{sqlCount} number of queries")
 
 outputText += """";
 $conn = connectToDB();
