@@ -1,12 +1,11 @@
 <?php
 require("./functions.php");
 
-$sql = "-- MariaDB
+$sql = " -- MariaDB
 
 -- when testing code. delete exisiting tables
 
 -- dont use this on 000webhost
-use id18333488_site; 
 
 drop table student_works_in;
 drop table supervises;
@@ -183,14 +182,15 @@ create table student_works_in (
 --     password varchar(50),
 --     primary key(supervisor_id, instructor_id, lecturer_id, student_enumber, password)
 -- );
-
 -- MariaDB
 
-use id18333488_site; -- dont use this on 000webhost
 
 insert into department values 
-('Department of Computer Engineering','head@ce.pdn.ac.lk','http://ce.pdn.ac.lk','http://people.ce.pdn.ac.lk','https://projects.ce.pdn.ac.lk');
+('Department of Computer Engineering','head@ce.pdn.ac.lk','http://ce.pdn.ac.lk','http://people.ce.pdn.ac.lk','https://projects.ce.pdn.ac.lk'),
+('Department of Mechanical Engineering','head@me.pdn.ac.lk','http://me.pdn.ac.lk','http://siteNotFound.ce.pdn.ac.lk','https://notFound.ce.pdn.ac.lk');
 
+
+-- this was generated using the API from api.ce.pdn.ac.lk and python scripting
 INSERT INTO student VALUES
 ('E/16/012','e16012@eng.pdn.ac.lk','e16012','','Adikari','Adikari','','','Department of Computer Engineering'),
 ('E/16/022','e16022@eng.pdn.ac.lk','e16022','','Amarasinghe D.L.C.','Amarasinghe D.L.C.','','','Department of Computer Engineering'),
@@ -393,10 +393,14 @@ INSERT INTO student VALUES
 
 
 insert into company values
-(1,'company1','first@company.com','someRank','https://google.com','We are google','addressline1','addressline2','country','state');
+(1,'CompanyNo1','admin@company1.com','someRank1','https://google1.com','We are google1','addressline11','addressline21','country1','state1'),
+(2,'companyNo2','admin@company1.com','someRank2','https://google2.com','We are google2','addressline12','addressline22','country2','state2');
 
 insert into company_awards values 
-(1,'Worlds worst company award for 2022');
+(1,'Worlds worst company award for 2022'),
+(1,'Worlds worst company award for 2021'),
+(1,'Worlds worst company award for 2020'),
+(2,'Worlds best company award for 2023');
 
 insert into company_services values 
 (1,'Google search engine'),
@@ -404,25 +408,32 @@ insert into company_services values
 (1,'Google Cloud Platform');
 
 insert into supervisor values
-(1,'supervisorName1','supervisor@compnay1.com','password123','077123456789',1);
+(1,'supervisorName1','supervisor@company1.com','password123','077123456789',1),
+(2,'supervisorName2','supervisor@company2.com','password123','077456789123',2);
 
 insert into supervises values 
 (1,'E/18/098');
 
 insert into instructor values
-(1,'instructor1','instructor1@ce.pdn.ac.lk','password123','07987654321','Department of Computer Engineering');
+(1,'instructor1','instructor1@ce.pdn.ac.lk','password123','07987654321','Department of Computer Engineering'),
+(2,'instructor2','instructor2@ce.pdn.ac.lk','password1234','07987654321','Department of Computer Engineering');
 
 insert into instructs values 
 (1,'E/18/098');
 
 insert into lecturer values
-(1,'lecturer1','lecturer@ce.pdn.ac.lk','password123','0123123465789','Department of Computer Engineering');
+(1,'lecturer1','lecturer1@ce.pdn.ac.lk','password123','01231234657890','Department of Computer Engineering'),
+(2,'lecturer2','lecturer2@ce.pdn.ac.lk','password123','01231234657891','Department of Computer Engineering');
 
 insert into guides values 
-(1, 'E/18/098');
+(1, 'E/18/098'),
+(1, 'E/18/155'),
+(1, 'E/18/100');
 
 insert into internship values
-(1,'Software developer intern',1,'2 months','Online','Software developing','50000');
+(1,'Software developer intern 1',1,'2 months','Online','Software developing','50000'),
+(2,'Software developer intern 2',1,'2 months','Online','Software developing','40000'),
+(3,'Software developer intern 3',1,'2 months','Online','Software developing','10000');
 
 insert into requests values
 (1,'E/18/098','2022/02/12');
@@ -443,7 +454,7 @@ if ($conn->multi_query($sql)) {
         // Store first result set
         if ($result = $conn->store_result()) {
             while ($row = $result->fetch_row()) {
-                printf("%s\n", $row[0]);
+                printf("%s", $row[0]);
             }
             $result->free_result();
         }

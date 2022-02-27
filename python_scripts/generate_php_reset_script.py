@@ -1,0 +1,40 @@
+file1 = open("../SQL/create_tables.sql")
+file2 = open("../SQL/insert_data.sql")
+
+outputText = """<?php
+require("./functions.php");
+
+$sql = " """
+
+for eachLine in file1:
+    if "id18333488_site;" in eachLine:
+        continue
+    outputText += eachLine
+for eachLine in file2:
+    if "id18333488_site;" in eachLine:
+        continue
+    outputText += eachLine
+
+outputText += """";
+$conn = connectToDB();
+$count = 0;
+if ($conn->multi_query($sql)) {
+    do {
+        // Store first result set
+        if ($result = $conn->store_result()) {
+            while ($row = $result->fetch_row()) {
+                printf("%s", $row[0]);
+            }
+            $result->free_result();
+        }
+        // if there are more result-sets, the print a divider
+        if ($conn->more_results()) {
+            $count++;
+        }
+        //Prepare next result set
+    } while ($conn->next_result());
+}
+echo ($count . " queries submitted <br> DB should be now resetted.");"""
+
+outputFile = open("../server/reset_db.php", "w")
+outputFile.write(outputText)
