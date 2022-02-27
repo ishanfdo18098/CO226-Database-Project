@@ -229,9 +229,7 @@ insert into company values
 (17,'companyNo17','admin@company17.com','someRank17','https://google17.com','We are google17','addressline117','addressline210','country1','state2'),
 (18,'companyNo18','admin@company18.com','someRank18','https://google18.com','We are google18','addressline118','addressline210','country1','state3'),
 (19,'companyNo19','admin@company19.com','someRank19','https://google19.com','We are google19','addressline119','addressline210','country1','state4'),
-(20,'companyNo20','admin@company20.com','someRank20','https://google20.com','We are google20','addressline120','addressline210','country1','state5'),
-
-;
+(20,'companyNo20','admin@company20.com','someRank20','https://google20.com','We are google20','addressline120','addressline210','country1','state5');
 
 insert into company_awards values 
 (1,'Award1'),

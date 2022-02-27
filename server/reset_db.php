@@ -394,7 +394,25 @@ INSERT INTO student VALUES
 
 insert into company values
 (1,'CompanyNo1','admin@company1.com','someRank1','https://google1.com','We are google1','addressline11','addressline21','country1','state1'),
-(2,'companyNo2','admin@company1.com','someRank2','https://google2.com','We are google2','addressline12','addressline22','country2','state2');
+(2,'companyNo2','admin@company2.com','someRank2','https://google2.com','We are google2','addressline12','addressline22','country1','state2'),
+(3,'companyNo3','admin@company3.com','someRank3','https://google3.com','We are google3','addressline13','addressline23','country1','state3'),
+(4,'companyNo4','admin@company4.com','someRank4','https://google4.com','We are google4','addressline14','addressline24','country1','state4'),
+(5,'companyNo5','admin@company5.com','someRank5','https://google5.com','We are google5','addressline15','addressline25','country1','state5'),
+(6,'companyNo6','admin@company6.com','someRank6','https://google6.com','We are google6','addressline16','addressline26','country1','state1'),
+(7,'companyNo7','admin@company7.com','someRank7','https://google7.com','We are google7','addressline17','addressline27','country1','state2'),
+(8,'companyNo8','admin@company8.com','someRank8','https://google8.com','We are google8','addressline18','addressline28','country1','state3'),
+(9,'companyNo9','admin@company9.com','someRank9','https://google9.com','We are google9','addressline19','addressline29','country1','state4'),
+(10,'companyNo10','admin@company10.com','someRank10','https://google10.com','We are google10','addressline110','addressline210','country1','state5'),
+(11,'companyNo11','admin@company11.com','someRank11','https://google11.com','We are google11','addressline111','addressline210','country1','state1'),
+(12,'companyNo12','admin@company12.com','someRank12','https://google12.com','We are google12','addressline112','addressline210','country1','state2'),
+(13,'companyNo13','admin@company13.com','someRank13','https://google13.com','We are google13','addressline113','addressline210','country1','state3'),
+(14,'companyNo14','admin@company14.com','someRank14','https://google14.com','We are google14','addressline114','addressline210','country1','state4'),
+(15,'companyNo15','admin@company15.com','someRank15','https://google15.com','We are google15','addressline115','addressline210','country1','state5'),
+(16,'companyNo16','admin@company16.com','someRank16','https://google16.com','We are google16','addressline116','addressline210','country1','state1'),
+(17,'companyNo17','admin@company17.com','someRank17','https://google17.com','We are google17','addressline117','addressline210','country1','state2'),
+(18,'companyNo18','admin@company18.com','someRank18','https://google18.com','We are google18','addressline118','addressline210','country1','state3'),
+(19,'companyNo19','admin@company19.com','someRank19','https://google19.com','We are google19','addressline119','addressline210','country1','state4'),
+(20,'companyNo20','admin@company20.com','someRank20','https://google20.com','We are google20','addressline120','addressline210','country1','state5');
 
 insert into company_awards values 
 (1,'Worlds worst company award for 2022'),
