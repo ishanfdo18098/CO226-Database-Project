@@ -357,7 +357,25 @@ insert into company_services values
 
 insert into supervisor values
 (1,'supervisorName1','supervisor@company1.com','password123','077123456789',1),
-(2,'supervisorName2','supervisor@company2.com','password123','077456789123',2);
+(2,'supervisorName2','supervisor@company2.com','password123','077456789123',2),
+(3,'supervisorName3','supervisor@company3.com','password123','077123456789',3),
+(4,'supervisorName4','supervisor@company4.com','password123','077456789123',4),
+(5,'supervisorName5','supervisor@company5.com','password123','077456789123',5),
+(6,'supervisorName6','supervisor@company6.com','password123','077456789123',6),
+(7,'supervisorName7','supervisor@company7.com','password123','077456789123',7),
+(8,'supervisorName8','supervisor@company8.com','password123','077456789123',8),
+(9,'supervisorName9','supervisor@company9.com','password123','077456789123',9),
+(10,'supervisorName10','supervisor@company10.com','password123','077456789123',10),
+(11,'supervisorName11','supervisor@company11.com','password123','077456789123',11),
+(12,'supervisorName12','supervisor@company12.com','password123','077456789123',12),
+(13,'supervisorName13','supervisor@company13.com','password123','077456789123',13),
+(14,'supervisorName14','supervisor@company14.com','password123','077456789123',14),
+(15,'supervisorName15','supervisor@company15.com','password123','077456789123',15),
+(16,'supervisorName16','supervisor@company16.com','password123','077456789123',16),
+(17,'supervisorName17','supervisor@company17.com','password123','077456789123',17),
+(18,'supervisorName18','supervisor@company18.com','password123','077456789123',18),
+(19,'supervisorName19','supervisor@company19.com','password123','077456789123',19),
+(20,'supervisorName20','supervisor@company20.com','password123','077456789123',20);
 
 insert into supervises values 
 (1,'E/18/098');
