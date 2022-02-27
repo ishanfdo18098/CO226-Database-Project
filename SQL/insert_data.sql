@@ -4,7 +4,8 @@ use id18333488_site; -- dont use this on 000webhost
 
 insert into department values 
 ('Department of Computer Engineering','head@ce.pdn.ac.lk','http://ce.pdn.ac.lk','http://people.ce.pdn.ac.lk','https://projects.ce.pdn.ac.lk'),
-('Department of Mechanical Engineering','head@me.pdn.ac.lk','http://me.pdn.ac.lk','http://siteNotFound.ce.pdn.ac.lk','https://notFound.ce.pdn.ac.lk');
+('Department of Mechanical Engineering','head@me.pdn.ac.lk','http://me.pdn.ac.lk','http://siteNotFound.me.pdn.ac.lk','https://notFound.me.pdn.ac.lk'),
+('Department of Manufacturing & Industrial Engineering','head@mie.pdn.ac.lk','http://mie.pdn.ac.lk','http://siteNotFound.mie.pdn.ac.lk','https://notFound.mie.pdn.ac.lk');
 
 
 -- this was generated using the API from api.ce.pdn.ac.lk and python scripting
