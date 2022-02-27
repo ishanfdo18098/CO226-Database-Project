@@ -1,3 +1,4 @@
+# Creates the reset_db.php file from the SQL files
 file1 = open("../SQL/create_tables.sql")
 file2 = open("../SQL/insert_data.sql")
 

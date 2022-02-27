@@ -129,10 +129,10 @@ printHeader();
             $salary = $row['salary_allowance'];
             $compy_name = $row['name'];
 
-            echo ($name . "<button type='button' onclick=\"location.href='/studentRequestInternship.php?internshipID=$id'\" class=\"btn btn-primary\">Apply</button>");
+            echo ($name . "<button type='button' onclick=\"location.href='/studentRequestInternship.php?internshipID=$id'\" class=\"btn btn-primary\">Apply</button><br>");
         }
     } else {
-        echo "<br>No supervisor available";
+        echo "<br>No internships available";
     }
 
     echo ("<br><br> You are currently working in,<br>");
