@@ -22,7 +22,7 @@ select lecturer.name from guides, lecturer,student where student.email = 'e18098
 -- get instructor details
 select instructor.name from student, instructs, instructor where student.email = 'e18098@eng.pdn.ac.lk' and student.e_no = instructs.e_no and instructs.instructor_id = instructor.instructor_id;
 -- get all available internships
-select internship.internship_id ,internship.name as internship_name, internship.time_period, internship.mode_location, internship.type, internship.salary_allowance, company.name from internship, company where internship.company_id = company.company_id;
+select internship.internship_id ,internship.name as internship_name, internship.time_period, internship.mode_location, internship.type, internship.salary_allowance, company.name from internship, company where internship.company_id = company.company_id order by internship.name;
 -- request new internship
 insert into requests values ($id,(select e_no from student where email = 'e18098@eng.pdn.ac.lk'),'$date');
 -- delete request
