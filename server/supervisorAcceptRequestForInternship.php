@@ -17,6 +17,7 @@ printHeader();
             $internshipID = $_GET['internship_id'];
             $sql = "delete from requests where e_no = '$eno' and internship_id = $internshipID;";
             if ($conn->query($sql) === TRUE) {
+                
             } else {
                 echo "Something went wrong please contact admin<br>Error: " . $sql . "<br>" . $conn->error;
                 die();

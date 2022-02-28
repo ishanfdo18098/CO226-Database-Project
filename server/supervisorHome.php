@@ -93,17 +93,17 @@ printHeader();
 
         <?php
         echo ("Requests for internships to your company,<br>");
-        $sql = "select student.e_no, student.first_name, internship.name as internshipName, internship.internship_id from requests, internship, company, student, supervises where company.company_id = internship.company_id and requests.internship_id = internship.internship_id and student.e_no = supervises.e_no and supervises.supervisor_id = (select supervisor_id from supervisor where email = '$email');";
+        $sql = "select student.e_no, student.preferred_name, internship.name, internship.internship_id from requests, supervisor, company, internship, student where supervisor.email = '$email' and supervisor.company_id = company.company_id and internship.company_id = company.company_id and requests.internship_id = internship.internship_id and student.e_no = requests.e_no;";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
             // output data of each row
             while ($row = mysqli_fetch_assoc($result)) {
                 $eno = $row['e_no'];
-                $studentName = $row['first_name'];
-                $internshipName = $row['internshipName'];
+                $studentName = $row['preferred_name'];
+                $internshipName = $row['name'];
                 $internshipID = $row['internship_id'];
-                echo ($eno . " " . $studentName . " " . $internshipName . "<button type='button' onclick=\"location.href='/supervisorAcceptRequestForInternship.php?reg_no=$e_no&internship_id=$internshipID'\" class=\"btn btn-success\">Accept</button><br>");
+                echo ($eno . " " . $studentName . " for " . $internshipName . "<button type='button' onclick=\"location.href='/supervisorAcceptRequestForInternship.php?reg_no=$eno&internship_id=$internshipID'\" class=\"btn btn-success\">Accept</button><br>");
             }
         } else {
             echo "No requests available";

@@ -135,20 +135,20 @@ printHeader();
         echo "<br>No internships available";
     }
 
-    echo ("<br><br> You are currently working in,<br>");
-    $sql = "select internship.name, company.name as comp_name from student_works_in, company, internship where e_no = (select e_no from student where email = '$email') and student_works_in.internship_id = internship.internship_id and company.company_id = internship.company_id;";
-    $result = mysqli_query($conn, $sql);
+    // echo ("<br><br> You are currently working in,<br>");
+    // $sql = "select internship.name, company.name as comp_name from student_works_in, company, internship where e_no = (select e_no from student where email = '$email') and student_works_in.internship_id = internship.internship_id and company.company_id = internship.company_id;";
+    // $result = mysqli_query($conn, $sql);
 
-    if (mysqli_num_rows($result) > 0) {
-        // output data of each row
-        while ($row = mysqli_fetch_assoc($result)) {
-            $internship_name = $row['name'];
-            $company_name = $row['comp_name'];
-            echo ($name . " at " . $company_name);
-        }
-    } else {
-        echo "N/A";
-    }
+    // if (mysqli_num_rows($result) > 0) {
+    //     // output data of each row
+    //     while ($row = mysqli_fetch_assoc($result)) {
+    //         $internship_name = $row['name'];
+    //         $company_name = $row['comp_name'];
+    //         echo ($name . " at " . $company_name);
+    //     }
+    // } else {
+    //     echo "N/A";
+    // }
 
     ?>
     <br><br>
