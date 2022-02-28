@@ -69,7 +69,9 @@ if (isset($_SESSION['userType'])) {
         Student: username - e18098@eng.pdn.ac.lk <br>
         password - e18098 <br><br>
         Supervisor: username - supervisor@company1.com<br>
-        password - password123</center>
+        password - password123
+        <br><br><a href="/reset_db.php">Reset the database</a>
+      </center>
     </div>
 
     <?php printFooter(); ?>
