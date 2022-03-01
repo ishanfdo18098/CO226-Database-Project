@@ -21,6 +21,13 @@ A Database to manage the allocation of internships in Companies for Students of 
 12) Start Apache and go to http://localhost/ using your webbrowser.
 13) Later, if you want to reset the databse. Go to http://localhost/reset_db.php
 
+## How to upload to website
+1) Make your changes in /server/ folder
+2) In WSL or linux, Run command "make uploadncftp" at the cloned repo. ![image](https://user-images.githubusercontent.com/73381996/156109875-4573ffed-f691-4a13-b2d8-4e04116d7b1c.png)
+
+- Note: You may need to install ncftp for the first time
+  To install, run "sudo apt update" then "sudo apt install ncftp"
+
 
 ## Team
 - [Fernando K.A.I. - E/18/098](https://people.ce.pdn.ac.lk/students/e18/098/)
