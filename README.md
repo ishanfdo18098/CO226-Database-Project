@@ -19,6 +19,7 @@ A Database to manage the allocation of internships in Companies for Students of 
 10) Open Apache config > httpd.conf from XAMPP main window.![image](https://user-images.githubusercontent.com/73381996/156097400-1724ad78-aff4-413e-ab9c-30c016565692.png)
 11) In line 252 and 253, change "C:/xampp/htdocs" into the path of /server in this repo. ![image](https://user-images.githubusercontent.com/73381996/156095012-b48790b9-db9a-42a5-8090-29e87982af9f.png)
 12) Start Apache and go to http://localhost/ using your webbrowser.
+13) Later, if you want to reset the databse. Go to http://localhost/reset_db.php
 
 
 ## Team
