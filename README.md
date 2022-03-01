@@ -25,8 +25,7 @@ A Database to manage the allocation of internships in Companies for Students of 
 1) Make your changes in /server/ folder
 2) In WSL or linux, Run command "make uploadncftp" at the cloned repo. ![image](https://user-images.githubusercontent.com/73381996/156109875-4573ffed-f691-4a13-b2d8-4e04116d7b1c.png)
 
-- Note: You may need to install ncftp for the first time
-  To install, run "sudo apt update" then "sudo apt install ncftp"
+- Note: You may need to install ncftp for the first time. To install, run "sudo apt update" then "sudo apt install ncftp"
 
 
 ## Team
