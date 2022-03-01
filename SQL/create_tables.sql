@@ -5,21 +5,21 @@
 -- dont use this on 000webhost
 use id18333488_site; 
 
-drop table student_works_in;
-drop table supervises;
-drop table student_skills;
-drop table company_services;
-drop table company_awards;
-drop table requests;
-drop table guides;
-drop table instructs;
-drop table student;
-drop table supervisor;
-drop table internship;
-drop table instructor;
-drop table lecturer;
-drop table company;
-drop table department;
+drop table if exists student_works_in;
+drop table if exists supervises;
+drop table if exists student_skills;
+drop table if exists company_services;
+drop table if exists company_awards;
+drop table if exists requests;
+drop table if exists guides;
+drop table if exists instructs;
+drop table if exists student;
+drop table if exists supervisor;
+drop table if exists internship;
+drop table if exists instructor;
+drop table if exists lecturer;
+drop table if exists company;
+drop table if exists department;
 
 create table company(
     company_id int primary key,
