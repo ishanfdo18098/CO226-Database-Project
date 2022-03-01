@@ -5,6 +5,20 @@
 ## DESCRIPTION :
 A Database to manage the allocation of internships in Companies for Students of the department of Computer Engineering under the supervision of the Staff through Student profiling, Company profiling and creating an interface between Students, Staff and Companies.
 
+## How to test the website locally
+
+1) Install XAMPP https://www.apachefriends.org/download.html
+2) Start MySQL and open Shell
+3) Login to MySQL command line using "mysql -u root"
+4) Run command "CREATE USER 'id18333488_user'@'localhost' IDENTIFIED BY 'wGskxx!o>b=8Rj8)';"
+5) Run command "GRANT ALL PRIVILEGES ON * . * TO 'id18333488_user'@'localhost';"
+6) Run command "create database id18333488_site;"
+7) Close Shell
+8) Open Apache config > httpd.conf from XAMPP main window.
+9) In line 252 and 253, change "C:/xampp/htdocs" into the path of /server in this repo. ![image](https://user-images.githubusercontent.com/73381996/156095012-b48790b9-db9a-42a5-8090-29e87982af9f.png)
+10) Start Apache and go to localhost using your webbrowser.
+
+
 ## Team
 - [Fernando K.A.I. - E/18/098](https://people.ce.pdn.ac.lk/students/e18/098/)
 - [Fernando K.N.A. - E/18/100](https://people.ce.pdn.ac.lk/students/e18/100/)
