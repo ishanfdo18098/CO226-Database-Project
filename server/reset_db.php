@@ -955,3 +955,6 @@ if ($conn->multi_query($sql)) {
     } while ($conn->next_result());
 }
 echo ($count . " out of 45 queries submitted <br> DB should be now resetted.");
+?>
+<br>
+<a href="/">Go back home</a>
