@@ -13,13 +13,12 @@ A Database to manage the allocation of internships in Companies for Students of 
 4) Run command "CREATE USER 'id18333488_user'@'localhost' IDENTIFIED BY 'wGskxx!o>b=8Rj8)';"
 5) Run command "GRANT ALL PRIVILEGES ON * . * TO 'id18333488_user'@'localhost';"
 6) Run command "create database id18333488_site;"
-7) Run command "use id18333488_site;"
-8) Run the commands from SQL/create_tables.sql and SQL/insert_data.sql in the mysql shell
-9) Close Shell
-10) Open Apache config > httpd.conf from XAMPP main window.![image](https://user-images.githubusercontent.com/73381996/156097400-1724ad78-aff4-413e-ab9c-30c016565692.png)
-11) In line 252 and 253, change "C:/xampp/htdocs" into the path of /server in this repo. ![image](https://user-images.githubusercontent.com/73381996/156095012-b48790b9-db9a-42a5-8090-29e87982af9f.png)
-12) Start Apache and go to http://localhost/ using your webbrowser.
-13) Later, if you want to reset the databse. Go to http://localhost/reset_db.php
+7) Close Shell
+8) Open Apache config > httpd.conf from XAMPP main window.![image](https://user-images.githubusercontent.com/73381996/156097400-1724ad78-aff4-413e-ab9c-30c016565692.png)
+9) In line 252 and 253, change "C:/xampp/htdocs" into the path of /server in this repo. ![image](https://user-images.githubusercontent.com/73381996/156095012-b48790b9-db9a-42a5-8090-29e87982af9f.png)
+10) Start Apache and go to http://localhost/reset_db.php
+11) Now the website is live at http://localhost/ 
+12) Later, if you want to reset the databse. Go to http://localhost/reset_db.php
 
 ## How to upload to website
 1) Make your changes in /server/ folder
