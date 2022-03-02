@@ -175,7 +175,7 @@ create table student_works_in (
 
 -- MariaDB
 
-use id18333488_site; -- dont use this on 000webhost
+-- use id18333488_site; -- dont use this on 000webhost
 
 insert into department values 
 ('Department of Computer Engineering','head@ce.pdn.ac.lk','http://ce.pdn.ac.lk','http://people.ce.pdn.ac.lk','https://projects.ce.pdn.ac.lk'),
