@@ -8,11 +8,11 @@ select * from supervisor where  email = 'e18098@eng.pdn.ac.lk' and password = 'e
 
 -- studentHome.php
 -- get student name from email
-select * from studnet where email = "e18098@eng.pdn.ac.lk";
+select * from studnet where email = 'e18098@eng.pdn.ac.lk';
 -- get supervisor details from student email
 select * from supervisor, supervises where supervises.supervisor_id = supervisor.supervisor_id and supervises.e_no = (select e_no from student where email = 'e18098@eng.pdn.ac.lk'); 
 -- get company details from company id
-select * from company where company_id = "1";
+select * from company where company_id = '1';
 -- get working in company details
 select internship.name as internship_name, company.name as company_name from student, student_works_in, internship, company where student.email = 'e18155@eng.pdn.ac.lk' and student.e_no = student_works_in.e_no and student_works_in.internship_id = internship.internship_id and internship.company_id = company.company_id;
 -- get requested interships
@@ -48,8 +48,8 @@ delete from supervises where supervisor_id = (select supervisor_id from supervis
 -- get all requests for internships for your company
 select student.e_no, student.first_name,  company.name as compName, internship.name as internshipName from requests, internship, company, student, supervises where company.company_id = internship.company_id and requests.internship_id = internship.internship_id and student.e_no = supervises.e_no and supervises.supervisor_id = (select supervisor_id from supervisor where email = 'supervisor@company1.com');
 -- accept request for internship
-delete from requests where e_no = "E/18/098";
-insert into student_works_in values ("E/18/098",1);
+delete from requests where e_no = 'E/18/098';
+insert into student_works_in values ('E/18/098',1);
 -- find who is working at your company
 select student.e_no, student.preferred_name, internship.internship_id, internship.name  from student ,student_works_in, internship, company, supervisor where internship.company_id = company.company_id and student_works_in.internship_id = internship.internship_id and company.company_id = supervisor.company_id and supervisor.email = 'supervisor@company1.com' and student.e_no = student_works_in.e_no ;
 -- delete student thats workign for you
@@ -62,3 +62,5 @@ delete from student_works_in where internship_id = 1 and e_no = 'E/18/098';
 select name, department_name, phone_number from instructor where email = 'nuwanjaliyagoda@ce.pdn.ac.lk';
 --  get students you are curently instructing
 select student.e_no, student.preferred_name from student, instructs, instructor where instructor.instructor_id = instructs.instructor_id and instructor.email = 'nuwanjaliyagoda@ce.pdn.ac.lk' and instructs.e_no = student.e_no;
+-- remove instructing student
+delete from instructs where e_no = 'E/18/098' and instructor_id = (select instructor_id from instructor where email = 'nuwanjaliyagoda@ce.pdn.ac.lk');
