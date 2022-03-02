@@ -50,6 +50,11 @@ printHeader();
                 <input type="text" name='eno'>
                 <button type="submit" class="btn btn-primary">Add</button>
             </form>
+            <form action="/instructorChangePassword.php" method="post">
+                <label for="newPass">Change your password: </label>
+                <input type="text" name='newPass'>
+                <button type='submit' class="btn btn-primary">Change password</button>
+            </form>
         </h3>
     </center>
 

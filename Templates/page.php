@@ -10,7 +10,13 @@ printHeader();
 
 <body>
     <?php printNavbar(); ?>
+    <center>
+        <h3>
+            <?php
 
+            ?>
+        </h3>
+    </center>
 
     <?php printFooter(); ?>
 </body>
