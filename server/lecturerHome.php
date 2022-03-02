@@ -44,14 +44,17 @@ printHeader();
             } else {
                 echo "<br>No supervisor available";
             }
-            echo ("<br><br>");
+            echo ("<br>");
+
+            // TODO: coordinates table is missing 🤣
             ?>
-            <br>Add new guiding student,<br>
+            Add new guiding student,<br>
             <form action="lecturerNewGuidingStudent.php" method="post">
                 <label for="eno">Reg. No:</label>
                 <input type="text" name='eno'>
                 <button type="submit" class="btn btn-primary">Add</button>
             </form>
+
         </h3>
     </center>
 
