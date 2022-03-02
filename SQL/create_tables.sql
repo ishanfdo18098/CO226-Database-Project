@@ -86,9 +86,9 @@ create table instructor (
     email varchar(100),
     password varchar(50),
     phone_number varchar(15),
-    deparment_name varchar(100),
+    department_name varchar(100),
     constraint fk_instructor
-        foreign key (deparment_name) references department (dep_name)
+        foreign key (department_name) references department (dep_name)
 );
 
 create table lecturer (

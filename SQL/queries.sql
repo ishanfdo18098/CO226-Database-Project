@@ -54,3 +54,11 @@ insert into student_works_in values ("E/18/098",1);
 select student.e_no, student.preferred_name, internship.internship_id, internship.name  from student ,student_works_in, internship, company, supervisor where internship.company_id = company.company_id and student_works_in.internship_id = internship.internship_id and company.company_id = supervisor.company_id and supervisor.email = 'supervisor@company1.com' and student.e_no = student_works_in.e_no ;
 -- delete student thats workign for you
 delete from student_works_in where internship_id = 1 and e_no = 'E/18/098';
+
+
+-- instructor
+-- test login  nuwanjaliyagoda@ce.pdn.ac.lk password123
+-- get name
+select name, department_name, phone_number from instructor where email = 'nuwanjaliyagoda@ce.pdn.ac.lk';
+--  get students you are curently instructing
+select student.e_no, student.preferred_name from student, instructs, instructor where instructor.instructor_id = instructs.instructor_id and instructor.email = 'nuwanjaliyagoda@ce.pdn.ac.lk' and instructs.e_no = student.e_no;
