@@ -64,3 +64,5 @@ select name, department_name, phone_number from instructor where email = 'nuwanj
 select student.e_no, student.preferred_name from student, instructs, instructor where instructor.instructor_id = instructs.instructor_id and instructor.email = 'nuwanjaliyagoda@ce.pdn.ac.lk' and instructs.e_no = student.e_no;
 -- remove instructing student
 delete from instructs where e_no = 'E/18/098' and instructor_id = (select instructor_id from instructor where email = 'nuwanjaliyagoda@ce.pdn.ac.lk');
+-- add new instructing student
+insert into instructs values ((select instructor_id from instructor where email = 'nuwanjaliyagoda@ce.pdn.ac.lk'), 'E/18/098');

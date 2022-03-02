@@ -44,6 +44,12 @@ printHeader();
                 echo "<br>No supervisor available";
             }
             ?>
+            <br>Add new instructing student,<br>
+            <form action="instructorAddInstructingStudent.php" method="post">
+                <label for="eno">Reg. No:</label>
+                <input type="text" name='eno'>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
         </h3>
     </center>
 
