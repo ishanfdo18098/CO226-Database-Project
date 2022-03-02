@@ -66,3 +66,11 @@ select student.e_no, student.preferred_name from student, instructs, instructor 
 delete from instructs where e_no = 'E/18/098' and instructor_id = (select instructor_id from instructor where email = 'nuwanjaliyagoda@ce.pdn.ac.lk');
 -- add new instructing student
 insert into instructs values ((select instructor_id from instructor where email = 'nuwanjaliyagoda@ce.pdn.ac.lk'), 'E/18/098');
+
+
+-- lecturer
+-- test login namilaindika@eng.pdn.ac.lk password123
+-- get name and phone number
+select name, email, phone_number from lecturer where email = 'namilaindika@eng.pdn.ac.lk';
+-- get students that are guided by u
+select preferred_name, student.e_no from lecturer, guides, student where lecturer.email = 'namilaindika@eng.pdn.ac.lk' and lecturer.lecturer_id = guides.lecturer_id and guides.e_no = student.e_no;
